@@ -1,0 +1,33 @@
+{
+  "name": "simple-get-post",
+  "version": "0.0.0",
+  "main": "lib/simple-get-post.js",
+  "scripts": {
+    "test": "grunt dist --verbose"
+  },
+  "homepage": "https://github.com/davidcole1977/simple-get-post",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidcole1977/simple-get-post.git"
+  },
+  "author": "David Cole",
+  "license": "LGPL-2.1",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.11.2",
+    "karma": "^0.12.37",
+    "karma-browserify": "^4.2.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "lodash": "^3.7.0",
+    "mocha": "^2.2.4",
+    "phantomjs": "^1.9.17"
+  }
+}
