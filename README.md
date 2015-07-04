@@ -4,7 +4,26 @@
 
 A simple helper module to get JSON data from, or post data to, a URL end point
 
+## Set up
+
+### coming soon...
+
+### Dependencies
+
+### coming soon...
+
+## Basic useage
+
+### coming soon...
+
+## API
+
+### coming soon...
+
+## Known issues
+
+### coming soon...
+
 ## Release history
 
-### 0.0.0
-* Initial grunt build boilerplate and Travis CI setup in place
+### coming soon...
