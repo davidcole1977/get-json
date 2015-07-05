@@ -21,15 +21,13 @@ function callback (error, data) {
   }
 }
 
-var requestDetails = {
-      url: 'http://requestURL.com/',
-      params: {
-        foo: 'bar'
-      },
-      callback: callback
-    };
-
-get(requestDetails);
+get({
+  url: 'http://requestURL.com/',
+  params: {
+    foo: 'bar'
+  },
+  callback: callback
+});
 ```
 
 ## API
