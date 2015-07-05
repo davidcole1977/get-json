@@ -28,10 +28,8 @@
     "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.2.0",
     "karma-mocha-reporter": "^1.0.2",
-    "karma-phantomjs-launcher": "^0.2.0",
     "lodash": "^3.7.0",
     "mocha": "^2.2.4",
-    "phantomjs": "^1.9.17",
     "time-grunt": "^1.2.1"
   }
 }
