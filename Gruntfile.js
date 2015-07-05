@@ -1,5 +1,35 @@
 module.exports = function(grunt) {
 
+  grunt.registerTask('serve_fixtures', 'Uses Express to serve fixture files for unit testing', function() {
+    var express = require('express'),
+        expressApp = express(),
+        bodyParser = require('body-parser'),
+        fixtureDir = __dirname + '/test/fixture-data/';
+
+    expressApp.get('/contact/', function (request, response) {      
+      response.header('Access-Control-Allow-Origin', '*'); // needed to allow test script running on angular to access fixtures server (CORS)
+     
+      if (request.query.user) {
+        response.status(200); 
+        response.type('json'); 
+        response.sendFile(fixtureDir + request.query.user + '-contact.json');
+      } else if (request.query.responseStatus) {
+        response.status(request.query.responseStatus); 
+        response.type('html'); 
+        response.send('response status ' + request.query.responseStatus);
+      } else {
+        response.status(200); 
+        response.type('json'); 
+        response.sendFile(fixtureDir + 'contact.json');
+      }
+
+    });
+
+    // start server
+    expressApp.listen(3000);
+    grunt.log.ok('Fixture server started at localhost:3000');
+  });
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -87,12 +117,14 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', [
     'jshint',
     'uglify',
+    'serve_fixtures',
     'karma:once'
   ]);
 
   grunt.registerTask('default', [
     'jshint',
     'uglify',
+    'serve_fixtures',
     'karma:watch'
   ]);
 

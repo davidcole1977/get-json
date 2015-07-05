@@ -1,0 +1,22 @@
+{
+  "firstName": "Wayne",
+  "lastName": "Carter",
+  "isAlive": true,
+  "age": 56,
+  "address": {
+    "streetAddress": "100 Foo Bar Ave",
+    "city": "York",
+    "state": "Herfordshire",
+    "postalCode": "AB1 23C"
+  },
+  "phoneNumbers": [
+    {
+      "type": "helpline",
+      "number": "1234567890"
+    },
+    {
+      "type": "foobar",
+      "number": "100200300"
+    }
+  ]
+}
