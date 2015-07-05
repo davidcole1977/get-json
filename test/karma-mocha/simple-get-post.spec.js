@@ -8,11 +8,11 @@ var module = require('../../lib/simple-get-post'),
 describe('simple-get-post', function() {
   'use strict';
 
-  describe('getQueryString()', function () {
-    var getQueryString = module.TEST.getQueryString;
+  describe('makeQueryString()', function () {
+    var makeQueryString = module.TEST.makeQueryString;
 
     it('exists', function () {
-      expect(getQueryString).to.exist;
+      expect(makeQueryString).to.exist;
     });
 
     it('returns basic query string', function () {
@@ -22,7 +22,7 @@ describe('simple-get-post', function() {
           },
           expected_result = '?foo=woo&bar=car';
 
-      expect(getQueryString(params)).to.equal(expected_result);
+      expect(makeQueryString(params)).to.equal(expected_result);
     });
 
     it('returns urlEncoded query string', function () {
@@ -32,7 +32,7 @@ describe('simple-get-post', function() {
           },
           expected_result = '?foo%20boo+shoo=woo%20hoo&bar%20har=car%20rar';
 
-      expect(getQueryString(params)).to.equal(expected_result);
+      expect(makeQueryString(params)).to.equal(expected_result);
     });
 
   });

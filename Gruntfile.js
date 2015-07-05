@@ -58,7 +58,7 @@ module.exports = function(grunt) {
         basePath: '',
         frameworks: ['browserify', 'mocha', 'chai'],
         plugins: [
-          'karma-phantomjs-launcher',
+          'karma-firefox-launcher',
           'karma-mocha',
           'karma-chai',
           'karma-browserify',
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
           'test/karma-mocha/*.spec.js': ['browserify']
         },
         reporters: ['mocha'],
-        browsers: ['PhantomJS'],
+        browsers: ['Firefox'],
         port: 9876,
         colors: true,
       },
