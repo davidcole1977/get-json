@@ -1,6 +1,6 @@
 {
   "name": "simple-get-post",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/simple-get-post.js",
   "scripts": {
     "test": "grunt dist --verbose"

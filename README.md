@@ -46,3 +46,7 @@ coming soon...
 
 ### 0.1.0
 * Added get() method
+
+### 0.1.1
+* Minor module refactoring to aid readability and testability
+* Updated karma config to use firefox instead of phantomjs (supports function.prototype.bind)
