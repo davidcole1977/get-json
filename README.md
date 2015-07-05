@@ -10,7 +10,9 @@ coming soon...
 
 ## Basic useage
 
-```shell
+```js
+var get = require('simple-get-post').get;
+
 function callback (error, data) {
   if (error) {
     throw error;
@@ -19,16 +21,13 @@ function callback (error, data) {
   }
 }
 
-var get = require('simple-get-post').get,
-    requestDetails = {
-      url: 'http://requestURL.com/',
-      params: {
-        foo: 'bar'
-      },
-      callback: callback
-    };
-
-get(requestDetails);
+get({
+  url: 'http://requestURL.com/',
+  params: {
+    foo: 'bar'
+  },
+  callback: callback
+});
 ```
 
 ## API
